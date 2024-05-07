@@ -1,10 +1,15 @@
 import React from 'react'
 import { PROJECTS } from '../constants'
+import { motion } from 'framer-motion'
 
 const Projects = () => {
   return (
     <section>
-        <h2>Projects</h2>
+        <motion.h2
+        whileInView={{opacity:1, y:0}}
+        initial={{opacity:0, y:-100}}
+        transition={{duration:1.5}} 
+        >Projects</motion.h2>
         <div className=''>
             {PROJECTS.map((project, index) => (
                 <div className='flex flex-wrap lg:justify-center py-5' key={index}>
